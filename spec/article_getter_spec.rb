@@ -33,12 +33,4 @@ describe 'ArticleGetter' do
   it 'should return a date' do
     @getter.parse_date('2009-11-12').instance_of?(Time).should be_true
   end
-
-  #it 'should return archives' do
-  #  arc = @getter.archives
-  #
-  #  arc.length.should be > 0
-  #  arc[0].articles.length.should be > 0
-  #end
-
 end
