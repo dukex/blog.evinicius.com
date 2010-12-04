@@ -1,13 +1,15 @@
 require File.expand_path('../spec_helper', __FILE__)
+$:.unshift File.join(File.expand_path(File.dirname(__FILE__)), 'lib')
+require 'article'
 
 describe 'Article' do
 
   before(:each) do
-    @article = Article.new('articles/view_first.haml')
+    @article = Article.new('spec/fixtures/articles/view_first.haml')
   end
 
   it 'should return full path to article' do
-    @article.path.should == 'articles/view_first.haml'
+    @article.path.should == 'spec/fixtures/articles/view_first.haml'
   end
 
   it 'should return file name' do
@@ -43,15 +45,15 @@ describe 'Article' do
   end
 
   it 'should be greater than 0 when article1.published is less than article2.published' do
-    article1 = Article.new('articles/leela.haml')
-    article2 = Article.new('articles/view_first.haml')
+    article1 = Article.new('spec/fixtures/articles/joao.haml')
+    article2 = Article.new('spec/fixtures/articles/view_first.haml')
 
     (article1 <=> article2).should be > 0
   end
 
   it 'should be equal to 0 when article1.published is equal to article2.published' do
-    article1 = Article.new('articles/view_first.haml')
-    article2 = Article.new('articles/view_first.haml')
+    article1 = Article.new('spec/fixtures/articles/view_first.haml')
+    article2 = Article.new('spec/fixtures/articles/view_first.haml')
 
     (article1 <=> article2).should == 0
   end
