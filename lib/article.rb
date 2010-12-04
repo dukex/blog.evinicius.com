@@ -10,7 +10,7 @@ class Article
   def slug
     File.basename(self.path, '.haml')
   end
-  
+
   def id
     slug.gsub('_', '-')
   end
@@ -30,7 +30,7 @@ class Article
   def last_modified
     updated || published
   end
-
+ 
   def template_variable(name)
     self.template[/\-\s*#\s*#{name}:\s*(.+)/, 1]
   end
