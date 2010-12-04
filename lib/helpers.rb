@@ -4,23 +4,8 @@ module Helpers
     haml(article.template, :layout => false)
   end
 
-  def article_path(article)
-    "/#{article.published.strftime("%Y/%m/%d")}/#{article.id}"
-  end
-
-  def date(article)
-    article.published.strftime("%Y/%m/%d")
-  end
-
-  def absoluteify_links(html)
-    host = 'http://www.iamneato.com'
-    path = "\\1#{host}\\2\\3"
-
-    html.
-      gsub(/href=(["'])(\/.*?)(["'])/, "href=#{path}").
-      gsub(/src=(["'])(\/.*?)(["'])/, "src=#{path}")
-  end
-
   def page_title(title)
+    return "blog.evinicius.com" if title.nil?
+    "#{title} - blog.evinicius.com"
   end
 end

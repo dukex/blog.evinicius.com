@@ -5,7 +5,7 @@ require 'archive'
 describe 'ArticleGetter' do
 
   before(:each) do
-    @getter = ArticleGetter.new('articles')
+    @getter = ArticleGetter.new('spec/fixtures/articles')
   end
 
   it 'should return all article file names' do

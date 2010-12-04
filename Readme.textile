@@ -1,12 +1,12 @@
-h1. iamneato.com
+h1. blog.evinicius.com
 
-This is the code responsible for "iamneato.com":http://www.iamneato.com/.  It's centered around a simple but deceivingly powerful Sinatra app.  It gives you full control of your website and it's a great way to learn Sinatra.  If you're interested in Sinatra, I encourage you to dig in.
+This is the code responsible for "blog.evinicius.com":http://blog.evinicius.com/.  It's centered around a simple but deceivingly powerful Sinatra app.  It gives you full control of your website and it's a great way to learn Sinatra.  If you're interested in Sinatra, I encourage you to dig in.
 
-This code was inspired by Hugh Evans: "hughevans.net":http://github.com/artpop/hughevans.net
+This code was inspired by Emilio Cavazos: "iamneato.com":http://iamneato.com
 
 h2. License
 
-The files found in the following directories are Copyright Emilio Cavazos:
+The files found in the following directories are Copyright Emerson Vinicius:
 
 * @/articles/@
 * @/public/images/@
