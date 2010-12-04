@@ -8,7 +8,7 @@ require 'article_getter'
 require 'helpers'
 require 'haml_overrides'
 
-class Iamneato < Sinatra::Base
+class BlogEvinicius < Sinatra::Base
 
   configure do
     set :app_file, __FILE__
@@ -27,27 +27,9 @@ class Iamneato < Sinatra::Base
   end
 
   get '/' do
-    @articles = @getter.all.sort[0..4]
-    haml :home
-  end
-
-  get '/:year/:month/:day/:id' do
-    @article = @getter.find_by_id(params[:id]) || raise(Sinatra::NotFound)
-    @title = @article.title
-    haml :article
-  end
-
-  get '/doodles' do
-    @title = 'Doodles'
-    @illustrations = illustrations
-    haml :doodles
-  end
-
-  get '/archive' do
-    @archives = @getter.archives
-    @total = @getter.all.length
-    @title = 'Archive'
-    haml :archive
+    #@articles = @getter.all.sort[0..4]
+    #haml :home
+    "  "
   end
 
   get '/about' do
@@ -55,16 +37,22 @@ class Iamneato < Sinatra::Base
     haml :about
   end
 
-  get '/articles.atom' do
-    @articles = @getter.all.sort
-    content_type 'application/atom+xml'
-    haml :feed, :layout => false
-  end
-
   get '/:stylesheet.css' do
     content_type 'text/css', :charset => 'utf-8'
     sass :"stylesheets/#{params[:stylesheet]}", :style => :compact
   end
+
+  get '/:id' do
+    @article = @getter.find_by_id(params[:id]) || raise(Sinatra::NotFound)
+    @title = @article.title
+    haml :article
+  end
+
+  #get '/articles.atom' do
+  #  @articles = @getter.all.sort
+  #  content_type 'application/atom+xml'
+  #  haml :feed, :layout => false
+  #end
 
   not_found do
     @title = '404 - Page Not Found'
@@ -72,5 +60,5 @@ class Iamneato < Sinatra::Base
   end
 end
 
-at_exit { Iamneato.run! if $!.nil? && Iamneato.run? }
+at_exit { BlogEvinicius.run! if $!.nil? && BlogEvinicius.run? }
 

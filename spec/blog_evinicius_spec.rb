@@ -1,13 +1,13 @@
 require File.expand_path('../spec_helper', __FILE__)
-require File.expand_path('../../Iamneato', __FILE__)
+require File.expand_path('../../blog_evinicius', __FILE__)
 
-Iamneato.set :environment, :test
+BlogEvinicius.set :environment, :test
 
-describe 'I Am Neato' do
+describe 'Blog Evinicius' do
   include Rack::Test::Methods
 
   def app
-    Iamneato
+    BlogEvinicius
   end
 
   it 'should respond to /' do
@@ -30,18 +30,8 @@ describe 'I Am Neato' do
     last_response.should be_ok
   end
 
-  it 'should respond to /doodles' do
-    get '/doodles'
-    last_response.should be_ok
-  end
-
-  it 'should respond to /archive' do
-    get '/archive'
-    last_response.should be_ok
-  end
-
-  it 'should respond to /2009/07/18/one-heroku-app-from-two-computers' do
-    get '/2009/07/18/one-heroku-app-from-two-computers'
+  it 'should respond to /one-heroku-app-from-two-computers' do
+    get '/one-heroku-app-from-two-computers'
     last_response.should be_ok
   end
 
