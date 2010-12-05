@@ -56,6 +56,5 @@ describe 'Article' do
     article2 = Article.new('spec/fixtures/articles/view_first.haml')
 
     (article1 <=> article2).should == 0
-  end
-
-end
+  end 
+ end

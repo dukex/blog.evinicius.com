@@ -20,7 +20,7 @@ class ArticleGetter
     all[0].first = true
     all
   end
-
+ 
   def find_by_id(id)
     self[id]
   end

@@ -5,7 +5,7 @@ class Article
 
   def initialize(file_path)
     @path = file_path
-    @template = File.read(file_path)
+    @template = File.read(file_path) 
   end
 
   def slug
