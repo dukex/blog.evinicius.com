@@ -4,6 +4,10 @@ module Helpers
     haml(article.template, :layout => false)
   end
 
+  def article_path(article)
+    "/#{article.id}"
+  end
+
   def page_title(title)
     return "blog.evinicius.com" if title.nil?
     "#{title} - blog.evinicius.com"
