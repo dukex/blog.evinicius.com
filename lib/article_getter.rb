@@ -16,7 +16,9 @@ class ArticleGetter
   end
 
   def all
-    files.map {|f| Article.new(f)}
+    all = files.map {|f| Article.new(f)}
+    all[0].first = true
+    all
   end
 
   def find_by_id(id)

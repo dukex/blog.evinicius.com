@@ -16,6 +16,16 @@ describe 'ArticleGetter' do
   it 'should return all Articles' do
     @getter.all[0].instance_of?(Article).should be_true
   end
+  
+  it 'should return true for first article when called first?' do
+    @getter.all[0].first?.should be true
+  end
+    
+  it 'should return false for second article when called first?' do
+    articles = @getter.all
+    articles[1].first?.should_not be true
+  end
+
 
   it 'should return a file by name (aka ID)' do
     @getter.find_by_id('view-first').title.should == 'View First'

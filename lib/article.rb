@@ -1,6 +1,7 @@
 class Article
 
   attr_reader :path, :template
+  attr_accessor :first
 
   def initialize(file_path)
     @path = file_path
@@ -41,5 +42,9 @@ class Article
   
   def <=>(other)
     [other.published.year, other.published.month, other.published.day] <=> [self.published.year, self.published.month, self.published.day]
+  end
+
+  def first?
+    @first
   end
 end
