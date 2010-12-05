@@ -1,4 +1,10 @@
-.row
-  %div{ :class => "column grid_12" }
-    - for @article in @articles
-      = haml(:_article, :layout => false)
+%section#content.grid_8.push_4.omega
+  - for @article in @articles
+    %section.article{:id => @article.id}
+      %h1
+        %a{:href => article_path(@article)}= @article.title
+        %span.date
+          =@article.published.strftime("%Y/%m/%d")
+      - if @article == @articles[0]
+        %article
+          = article_resume(@article) 

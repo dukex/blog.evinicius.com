@@ -1,6 +1,11 @@
-.row
-  %div{ :class => "column grid_12" }
-    = haml(:_article, :layout => false)
+%section#content{:class=>"grid_8 push_4 omega article"}
+  %h1
+    Como e chato fazer massa de testes
+  %article
+    = article_body(@article)
 
-    #disqus_thread
-    %script{:type => 'text/javascript', :src => 'http://disqus.com/forums/iamneato/embed.js'}
+  %div#disqus_thread
+  :javascript
+    var disqus_developer = 1;
+    var disqus_identifier = "#{@article.id}";
+  %script{:async => "true", :src => "http://emersonvinicius.disqus.com/embed.js"}
