@@ -27,7 +27,7 @@ class BlogEvinicius < Sinatra::Base
   end
 
   get '/' do
-    @articles = @getter.all.sort[0..4]
+    @articles = @getter.all
     haml :home
   end
 
