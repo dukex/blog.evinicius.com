@@ -25,12 +25,7 @@
           %a.home{:href => "/", :title => "Emerson Vinicius"}
             %span Emerson
             Vinicius
-        %nav
-          %ul
-            %li
-              %a{:href => "#fs"} Site
-            %li
-              %a{:href => "323423"} Twitter
+        = haml(:_menu, :layout => false)
       = yield
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"}
     %script{:src => "js/jquery.infinitescroll.min.js"}
