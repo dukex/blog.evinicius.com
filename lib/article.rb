@@ -20,6 +20,10 @@ class Article
     template_variable('title')
   end
 
+  def resume
+    template_variable('resume')
+  end
+
   def published
     @published ||= parse_date(template_variable('published'))
   end

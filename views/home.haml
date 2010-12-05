@@ -7,4 +7,4 @@
           =@article.published.strftime("%Y/%m/%d")
       - if @article == @articles[0]
         %article
-          = article_resume(@article) 
+          = @article.resume

@@ -40,6 +40,14 @@ describe 'Article' do
     @article.template_variable('title').should == 'View First'
   end
 
+  it 'should be able to parse "resume" out of a line up' do
+    @article.template_variable('resume').should == 'This article is about things, many things'
+  end
+
+  it 'should be able to parse "resume" out of a line up' do
+    @article.resume.should == 'This article is about things, many things'
+  end
+
   it 'should return a date' do
     @article.parse_date('2009-11-12').instance_of?(Time).should be_true
   end
