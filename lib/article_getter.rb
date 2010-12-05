@@ -1,5 +1,4 @@
 require 'article'
-require 'archive'
 
 class ArticleGetter
 
