@@ -30,18 +30,18 @@ describe 'Blog Evinicius' do
     last_response.should be_ok
   end
 
-  it 'should respond to /one-heroku-app-from-two-computers' do
-    get '/one-heroku-app-from-two-computers'
+  it 'should respond to /view-first' do
+    get '/view-first'
     last_response.should be_ok
   end
 
   it 'should be css in the headers when getting css' do
-    get '/styles.css'
+    get '/stylesheets/application.css'
     last_response.headers['Content-Type'].should == 'text/css;charset=utf-8'
   end
 
-  it 'should respond to /style.css' do
-    get '/styles.css'
+  it 'should respond to /application.css' do
+    get '/stylesheets/application.css'
     last_response.should be_ok
   end
 
