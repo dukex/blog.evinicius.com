@@ -1,6 +1,5 @@
 require File.expand_path('../spec_helper', __FILE__)
 require 'article_getter'
-require 'archive'
 
 describe 'ArticleGetter' do
 
