@@ -37,7 +37,7 @@ class BlogEvinicius < Sinatra::Base
     haml :about
   end
 
-  get '/:stylesheet.css' do
+  get '/stylesheets/:stylesheet.css' do
     content_type 'text/css', :charset => 'utf-8'
     sass :"stylesheets/#{params[:stylesheet]}", :style => :compact
   end
