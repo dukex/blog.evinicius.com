@@ -25,7 +25,7 @@ describe 'Article' do
   end
 
   it 'should return published date' do
-    @article.published.should == Time.parse('2009-7-5')
+    @article.published.should == Time.parse('2008-7-5')
   end
 
   it 'should return nil when updated is not set' do
@@ -45,8 +45,8 @@ describe 'Article' do
   end
 
   it 'should be greater than 0 when article1.published is less than article2.published' do
-    article1 = Article.new('spec/fixtures/articles/joao.haml')
-    article2 = Article.new('spec/fixtures/articles/view_first.haml')
+    article1 = Article.new('spec/fixtures/articles/view_first.haml')
+    article2 = Article.new('spec/fixtures/articles/joao.haml')
 
     (article1 <=> article2).should be > 0
   end
