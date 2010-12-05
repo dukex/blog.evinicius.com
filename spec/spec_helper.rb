@@ -3,6 +3,7 @@ require 'spec'
 require 'spec/autorun'
 require 'spec/interop/test'
 require 'rack/test'
+require 'haml'
 
 # absolute path to lib folder
 lib_dir = File.expand_path('../../lib', __FILE__)
