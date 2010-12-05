@@ -1,0 +1,88 @@
+article, header, section, nav
+  display: block
+
+body
+  background: #EEEEEE
+  height: 100%
+  border: none
+
+#container
+  overflow: hidden 
+
+header
+  position: fixed !important
+  padding: 10px 0
+  h1
+    margin: 0
+    font: bold 60px / 50px "Mido", "Helvetica", "Verdana", sans-serif
+    text-align: left
+    text-transform: lowercase
+    text-shadow: 0px 1px 1px #FFF
+    a
+      color: #b23755
+      text-decoration: none
+  nav
+    margin: 10px 5px
+    ul
+      overflow: hidden
+      margin: 0
+      list-style: none
+    li
+      float: left
+      padding: 3px 5px
+
+section#content
+  margin-bottom: 10px
+  border-left: 4px solid #29647A
+  section
+    padding: 20px 0
+    margin: 0 20px
+    border-top: 1px solid #CCC
+    border-bottom: 1px solid #EEE
+    text-shadow: 1px 1px 1px #FFF
+    font-size: 20px
+    font-family: Georgia, serif
+    color: #949494
+  &.article
+    padding: 20px 0
+    margin: 0 20px
+    border-top: 1px solid #CCC
+    border-bottom: 1px solid #EEE
+    text-shadow: 1px 1px 1px #FFF
+    font-size: 20px
+    font-family: Georgia, serif
+    color: #949494
+    margin-left: 10px
+    padding: 20px
+  section:first-child, &.article
+    border-top: none
+  section:last-child, &.article
+    border-bottom: none
+  h1
+    font-style: normal
+    font-family: Georgia, serif
+    a
+      text-decoration: none
+      line-height: 45px
+      font-size: 45px
+      color: #000
+      &:hover
+        color: #777
+    span.date
+      display: block
+  &.article p
+    text-shadow: none
+    color: #000
+
+div#navigation
+  margin: 0 30px
+  padding: 5px 10px
+  border: 1px solid #000
+  border-radius: 30px
+  ul
+    list-style: none
+  li
+    &.prev
+      float: left
+    &.next
+      float: right
