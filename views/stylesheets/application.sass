@@ -84,7 +84,7 @@ section#content
     font-size: 20px
     font-family: Georgia, serif
     color: #949494
-  &.article, h3
+  &.article, &.about, h3
     padding: 20px 0
     margin: 0 20px
     border-top: 1px solid #CCC
@@ -95,7 +95,7 @@ section#content
     color: #949494
     margin-left: 10px
     padding: 20px
-  &.article
+  &.article, &.about
     -webkit-box-sizing: border-box
     h3
       padding: 0
@@ -111,6 +111,12 @@ section#content
     margin-bottom: 20px
     text-shadow: none
     color: #000
+  &.about 
+    min-height: 500px
+    p
+      margin-bottom: 0
+      a
+        color: #676767 
 
 div#navigation
   margin: 0 30px
