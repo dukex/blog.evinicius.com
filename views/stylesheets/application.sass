@@ -7,9 +7,16 @@ body
   border: none
 
 pre code
+  margin: 0 0 20px 0
   width: 580px
   border: 1px solid #CCC
   background: #DDD
+
+blockquote p
+  margin: 0px 0px 0px 10px
+  line-height: 25px
+  font-size: 100%
+  font-weight: normal
 
 #container
   overflow: hidden 
@@ -39,6 +46,35 @@ header
 section#content
   margin-bottom: 10px
   border-left: 4px solid #29647A
+  h2
+    font-size: 25px
+    text-decoration: underline
+    margin: 40px 0px 20px
+    color: #778
+  h3
+    margin: 0
+    padding: 0 
+    border: 0
+    font-variant: normal
+  h1
+    font-style: normal
+    font-family: Georgia, serif
+    a, &.title
+      text-decoration: none
+      line-height: 45px
+      font-size: 45px
+      color: #000
+      &:hover
+        color: #777
+    span.date
+      display: block
+  ol li
+    color: black
+    font-size: 21px
+    line-height: 30px
+    list-style: disc outside
+    margin: 0 0 0 20px
+    
   section
     padding: 20px 0
     margin: 0 20px
@@ -59,28 +95,20 @@ section#content
     color: #949494
     margin-left: 10px
     padding: 20px
-  h3
-    margin: 0
-    padding: 0 
-    border: 0
-    font-variant: normal
+  &.article
+    -webkit-box-sizing: border-box
+    h3
+      padding: 0
+      margin: 0 0 20px 0
+      border: none
+    .dsq-trackback-url
+      width: 465px
   section:first-child, &.article
     border-top: none
   section:last-child, &.article
     border-bottom: none
-  h1
-    font-style: normal
-    font-family: Georgia, serif
-    a, &.title
-      text-decoration: none
-      line-height: 45px
-      font-size: 45px
-      color: #000
-      &:hover
-        color: #777
-    span.date
-      display: block
   &.article p
+    margin-bottom: 20px
     text-shadow: none
     color: #000
 
