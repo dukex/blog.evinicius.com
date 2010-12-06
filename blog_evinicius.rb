@@ -6,7 +6,6 @@ require 'sinatra/base'
 require 'time'
 require 'article_getter'
 require 'helpers'
-require 'haml_overrides'
 
 class BlogEvinicius < Sinatra::Base
 
