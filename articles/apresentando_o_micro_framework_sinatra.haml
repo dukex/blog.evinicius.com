@@ -1,0 +1,95 @@
+-# title: Apresentando o Micro Framework Sinatra
+-# published: 2010-08-24
+-# resume: Uma pequena apresentação do Sinatra, a idéia é mostrar como funciona o Sinatra em sua forma mais simples.
+
+%p
+  Quero apresentar o Micro Framework #{link_to("Sinatra", "http://www.sinatrarb.com/")}. 
+
+%h2 About (tradução livre do site do Sinatra)
+
+%blockquote
+  %p
+    Sinatra foi projetado e desenvolvido por Blake Mizerany (bmizerany), na Califórnia. 
+    Continuar o desenvolvimento não seria possível sem o permanente apoio financeiro concedido pela 
+    #{link_to("Heroku", "http://heroku.com/")} e o apoio emocional por 
+    #{link_to("Adam Wiggins", "http://adam.blog.heroku.com/")} da Heroku, 
+    #{link_to("Wanstrath Chris", "http://defunkt.github.com/")}, #{link_to("PJ Hyett","http://pjhyett.github.com/")}
+    e o resto da tripulação do #{link_to("Github","http://github.com")}.
+
+%h2 Na pratica
+%p
+  O Sinatra é um framework escrito em ruby, com ele, de uma forma, simples, rapido e facil é possivel
+  criar uma API ou um site com poucas paginas, mais isso depende de quem e como se trabalha com ele,
+  esse blog, por exemplo, é feito em cima do Sinatra
+
+%p 
+  Prometo, em breve, escrever algo sobre o código de blog e de uma app que criei quando estava aprendendo 
+  Sinatra, o #{link_to("@kencurte", "http://twitter.com/kencurte")}.
+
+%h2 Instalando
+%p 
+  Partindo da idéia que que você tenha o ruby instalado com rubygems, caso não veja
+  #{link_to('isso', 'http://akitaonrails.com/2010/06/21/akita-responde-comecando-com-ruby-on-rails')}
+  e #{link_to('isso','http://akitaonrails.com/2010/06/21/akita-responde-comecando-com-ruby-on-rails')},
+  execute no seu terminal:
+%pre.language-shell
+  %code
+    :preserve
+      $ gem install sinatra
+%p Pronto! o sinatra esta instalado, legal né?
+
+%h2 
+  Vamos ao 
+  %del{:datetime => "2010-08-18T16:08:38+00:00"} inutil
+  Hello World!
+
+%p
+  crie um arquivo chamado app.rb:
+
+%pre.language-shell
+  %code touch app.rb
+
+%p
+  Nele vamos começar a escrever nossa aplicação:
+
+%pre.language-ruby
+  %code
+    :preserve
+      require 'rubygems'
+      require 'sinatra'
+      get '/' do
+        'Hello world!'
+      end
+
+%ol
+  %li
+    Linha 1 Requisitamos o rubygems, isto permite que usamos as gem instaladas, não é necessario no ruby 1.9.2.
+  %li
+    Linha 2 Requisitamos o sinatra
+  %li
+    Linha 3 Dizemos que quando tiver um get em '/' ela ira executar o que estiver no bloco
+  %li
+    Linha 4 Imprimimos Hello world!
+  %li
+    Linha 6 Encerramos o bloco iniciado em get
+
+%p
+  Para rodar vamos ao terminal, navege até o diretorio do arquivo app.rb e digite:
+%pre.language-shell
+  %code
+    :preserve
+      $ ruby app.rb -p 3000 #porta 3000
+
+%p
+  Entre em #{link_to('localhost:3000', 'localhost:3000')} que você ira ver "Hello word!".
+
+%h2
+  Mais...
+%p
+  Para saber mais veja o a #{link_to("documentação do Sinatra", "http://www.sinatrarb.com/documentation")}
+  no proprio site, além da documentação lá tem demos e um FAQ, o conteudo do site é muito bom, Existe
+  tambem o #{link_to("Sinatra Book", "http://sinatra-book.gittr.com/")}, um livro colaborativo e online do 
+  sinatra.
+
+%p 
+  Qualquer dúvida comenta ou da um toque no #{link_to("meu twitter", 'http://twitter.com/emersonvinicius')}.
