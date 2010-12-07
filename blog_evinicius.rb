@@ -58,5 +58,4 @@ class BlogEvinicius < Sinatra::Base
   end
 end
 
-at_exit { BlogEvinicius.run! if $!.nil? && BlogEvinicius.run? }
 
