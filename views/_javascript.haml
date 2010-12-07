@@ -2,18 +2,19 @@
 %script{:src => "javascripts/highlight.pack.js"}
 %script{:src => "javascripts/application.js"}
 
-%script{:src => "http://www.google-analytics.com/ga.js",:defer =>"defer"}
+= if settings.environment === 'production'
+  %script{:src => "http://www.google-analytics.com/ga.js",:defer =>"defer"}
 
-:javascript
-  try{
-    var pageTracker = _gat._getTracker("UA-1984444-24");
-    pageTracker._trackPageview("/");
-  } catch(err) {}
-    
-  $(document).ready(function(){
-    $('a').click(function(){
-      pageTracker._trackPageview(this.href);
-      return true;
+  :javascript
+    try{
+      var pageTracker = _gat._getTracker("UA-1984444-24");
+      pageTracker._trackPageview("/");
+    } catch(err) {}
+      
+    $(document).ready(function(){
+      $('a').click(function(){
+        pageTracker._trackPageview(this.href);
+        return true;
+      });
     });
-  });
 
