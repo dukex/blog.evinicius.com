@@ -22,7 +22,6 @@ blockquote p
   overflow: hidden 
 
 header
-  position: fixed !important
   padding: 10px 0
   h1
     margin: 0
@@ -85,7 +84,6 @@ section#content
     font-family: Georgia, serif
     color: #949494
   &.article, &.about, h3
-    padding: 20px 0
     margin: 0 20px
     border-top: 1px solid #CCC
     border-bottom: 1px solid #EEE
@@ -97,6 +95,9 @@ section#content
     padding: 20px
   &.article, &.about
     -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
     h3
       padding: 0
       margin: 0 0 20px 0
