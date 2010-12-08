@@ -15,7 +15,6 @@ class BlogEvinicius < Sinatra::Base
     set :run, Proc.new { !test? }
     set :dump_errors, true
     set :haml, {:format => :html5 }
-    set :environment, :production
   end
 
   helpers do
