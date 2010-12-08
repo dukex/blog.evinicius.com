@@ -2,3 +2,4 @@
 *.swp
 .bundle
 coverage
+articles/dev_*
