@@ -10,6 +10,11 @@ describe 'Blog Evinicius' do
     BlogEvinicius
   end
 
+  it 'should return true for BlogEvinicius is kind of Sinatra::Base' do
+    blog = BlogEvinicius.new
+    blog.kind_of?(Sinatra::Base).should be true
+  end
+
   it 'should respond to /' do
     get '/'
     last_response.should be_ok
@@ -30,8 +35,8 @@ describe 'Blog Evinicius' do
     last_response.should be_ok
   end
 
-  it 'should respond to /view-first' do
-    get '/view-first'
+  it 'should respond to /apresentando-o-micro-framework-sinatra' do
+    get '/apresentando-o-micro-framework-sinatra'
     last_response.should be_ok
   end
 
