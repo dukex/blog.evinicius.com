@@ -17,6 +17,11 @@ GEM
       json_pure (>= 1.1.7)
     sinatra (1.0)
       rack (>= 1.0)
+    sinatra-bundles (0.4.0)
+      packr
+      rack (>= 1.0)
+      rainpress
+      sinatra (>= 1.0)
     test-unit (1.2.3)
       hoe (>= 1.5.1)
 
@@ -30,4 +35,5 @@ DEPENDENCIES
   rcov
   rspec (= 1.3.0)
   sinatra (= 1.0)
+  sinatra-bundles
   test-unit (= 1.2.3)

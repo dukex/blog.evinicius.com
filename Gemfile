@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'haml', '3.0.12'
 gem 'sinatra', '1.0', :require => false
+gem 'sinatra-bundles'
 
 group :test do
   gem 'rack-test', '0.5.4'

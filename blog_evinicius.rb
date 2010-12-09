@@ -3,11 +3,13 @@ $:.unshift File.join(File.expand_path(File.dirname(__FILE__)), 'lib')
 
 require 'bundler_helper'
 require 'sinatra/base'
+require 'sinatra/bundles'
 require 'time'
 require 'article_getter'
 require 'helpers'
 
 class BlogEvinicius < Sinatra::Base
+  register Sinatra::Bundles
 
   configure do
     set :app_file, __FILE__
@@ -16,6 +18,9 @@ class BlogEvinicius < Sinatra::Base
     set :dump_errors, true
     set :haml, {:format => :html5 }
   end
+  
+  javascript_bundle(:all, %w(jquery.min highlight.pack application))
+  stylesheet_bundle(:all, %w(reset 960 text typogridphy application github))
 
   helpers do
     include Helpers
