@@ -1,7 +1,7 @@
 require File.expand_path('../spec_helper', __FILE__)
 require 'article_getter'
 
-describe 'ArticleGetter' do
+describe ArticleGetter do
 
   before(:each) do
     @getter = ArticleGetter.new('spec/fixtures/articles')

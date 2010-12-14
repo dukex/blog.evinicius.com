@@ -3,7 +3,7 @@ require File.expand_path('../../blog_evinicius', __FILE__)
 
 BlogEvinicius.set :environment, :test
 
-describe 'Blog Evinicius' do
+describe BlogEvinicius do
   include Rack::Test::Methods
 
   def app

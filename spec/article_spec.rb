@@ -2,7 +2,7 @@ require File.expand_path('../spec_helper', __FILE__)
 $:.unshift File.join(File.expand_path(File.dirname(__FILE__)), 'lib')
 require 'article'
 
-describe 'Article' do
+describe Article do
 
   before(:each) do
     @article = Article.new('spec/fixtures/articles/view_first.haml')
