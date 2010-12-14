@@ -42,7 +42,7 @@ describe BlogEvinicius do
 
   it 'should be css in the headers when getting css' do
     get '/stylesheets/application.css'
-    last_response.headers['Content-Type'].should == 'text/css;charset=utf-8'
+    last_response.headers['Content-Type'].should == 'text/css'
   end
 
   it 'should respond to /application.css' do
