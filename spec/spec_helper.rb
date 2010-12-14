@@ -2,6 +2,7 @@ lib_dir = File.expand_path('../../lib', __FILE__)
 $:.unshift lib_dir unless $:.include?(lib_dir)
 
 require 'rspec'
+require 'sinatra'
 require 'rack/test'
 
 set :environment, :test
