@@ -1,6 +1,5 @@
 $:.unshift File.join(File.expand_path(File.dirname(__FILE__)), 'lib')
 
-require 'bundler_helper'
 require 'sinatra/base'
 require 'sinatra/bundles'
 require 'time'
