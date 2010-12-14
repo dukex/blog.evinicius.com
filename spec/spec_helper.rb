@@ -1,13 +1,7 @@
 lib_dir = File.expand_path('../../lib', __FILE__)
 $:.unshift lib_dir unless $:.include?(lib_dir)
 
-require 'rubygems'
-require 'sinatra'
-require 'spec'
-require 'spec/autorun'
-require 'spec/interop/test'
 require 'rack/test'
-require 'haml'
 
 set :environment, :test
 set :run, false
@@ -20,6 +14,6 @@ module HelperMethods
   end
 end
 
-Spec::Runner.configure do |config|
+RSpec.configure do |config|
   config.include(HelperMethods) 
 end

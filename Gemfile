@@ -5,8 +5,7 @@ gem 'sinatra', '1.0', :require => false
 gem 'sinatra-bundles'
 
 group :test do
-  gem 'rack-test', '0.5.4'
-  gem 'test-unit', '= 1.2.3'
-  gem 'rspec', '1.3.0'
+  gem 'rack-test'
+  gem 'rspec', '>= 2.0'
   gem 'rcov'
 end
