@@ -6,5 +6,5 @@
         %span.date
           =@article.published.strftime("%Y/%m/%d")
       - if @article == @articles[0]
-        %article
+        %article.resume
           = @article.resume
