@@ -12,7 +12,7 @@ header, section, nav
 header
   padding: 10px 0 0 30px
   h1
-    font: bold 120px / 120px "Mido", "Helvetica", "Verdana", sans-serif
+    font: bold 80px / 80px "Mido", "Helvetica", "Verdana", sans-serif
     text-align: left 
     text-transform: lowercase
     text-shadow: 0px 2px 2px #FFF
@@ -20,16 +20,7 @@ header
       color: #b23755
       text-decoration: none
   nav
-    //margin: 10px 5px
-    display: none
-    ul
-      overflow: hidden
-      margin: 0
-      list-style: none
-    li
-      float: left
-      padding: 3px 5px
-
+    display: none 
 section#content
   clear: both
   //h2
@@ -42,28 +33,30 @@ section#content
   //  padding: 0 
   //  border: 0
   //  font-variant: normal
+  section
+    padding: 20px 0 40px 0
+    margin: 0 20px
+    border-top: 2px solid #DDD
+    border-bottom: 2px solid #FFF
+    text-shadow: 1px 1px 1px #FFF
+    font-size: 20px
+    font-family: Georgia, serif
+    color: #949494
+  &.article
+    background: #FF0  
+    border-top: 3px solid #DDD
   h1
     font-style: normal
     font-family: Georgia, serif
     a, &.title
       text-decoration: none
-      line-height: 100px
-      font-size: 100px
+      line-height: 80px
+      font-size: 80px
       color: #000
       &:hover
-        color: #777
     span.date
       display: block
       font-size: 40px
-  section
-    padding: 40px 0
-    margin: 0 20px
-    border-top: 3px solid #DDD
-    border-bottom: 3px solid #F7F7F7
-    text-shadow: 1px 1px 1px #FFF
-    font-size: 20px
-    font-family: Georgia, serif
-    color: #949494
   article.resume
     display: none
 
