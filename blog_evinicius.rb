@@ -18,7 +18,10 @@ class BlogEvinicius < Sinatra::Base
   end
   
   javascript_bundle(:all, %w(jquery.min highlight.pack application))
-  stylesheet_bundle(:all, %w(reset 960 text typogridphy application github))
+  stylesheet_bundle(:all, %w(reset 960 text typogridphy))
+  stylesheet_bundle(:application, %w(application))
+  stylesheet_bundle(:mobile, %w(mobile))
+
 
   helpers do
     include Helpers
