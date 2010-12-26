@@ -6,7 +6,12 @@
     %meta{:content => "programming, ruby, development, html, web", :name => "keywords"}/
     %meta{:content => "index,follow", :name => "robots"}/
     %title= page_title(@title)
-    = stylesheet_bundle_link_tag(:all)
+    %link{:href => "stylesheets/reset.css", :media => "all", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/960.css", :media => "screen and (min-device-width: 482px)", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/text.css", :media => "all", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/typogridphy.css", :media => "all", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/application.css", :media => "screen and (min-device-width: 482px)", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/mobile.css", :media => "screen and (max-device-width: 480px)", :rel => "stylesheet"}/
   %body
     #container.container_12
       %header.grid_4.alpha
